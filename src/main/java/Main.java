@@ -44,8 +44,9 @@ public class Main {
     		conn.setRequestProperty("Accept", "application/json");
     		
     		BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
-    		JSONObject jObj = new JSONObject(br.readLine());
-    		String output = jObj.toString();
+//    		JSONObject jObj = new JSONObject(br.readLine());
+//    		String output = jObj.toString();
+    		String output = "ggg";
     		System.out.println("Output from Server .... \n");
 //    		while ((output = br.readLine()) != null) 
 //    		{
