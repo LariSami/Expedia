@@ -32,36 +32,39 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    get("/hello", (req, res) -> {
-    	return "HELLO";
-//    	try 
-//    	{
-//    		URL url = new URL("https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel");
-//    		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-//    		conn.setRequestMethod("GET");
+    get("/hello", (req, res) -> 
+    {
+    	HttpURLConnection conn = null;
+    	try 
+    	{
+    		URL url = new URL("https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel");
+    		conn = (HttpURLConnection) url.openConnection();
+    		conn.setRequestMethod("GET");
 //    		conn.setRequestProperty("Accept", "application/json");
-//    		
-//    		BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
-//    		
-//    		String output;
-//    		System.out.println("Output from Server .... \n");
-//    		while ((output = br.readLine()) != null) {
-//    			output =  output;
-//    		}
-//
-//    		conn.disconnect();
-//    		return output;
-//
-//    	} 
-//    	catch (MalformedURLException e1)
-//    	{
-//    		e1.printStackTrace();
-//    	} 
-//    	catch (IOException e) 
-//    	{
-//    		e.printStackTrace();
-//    	}
-//    	return "nop";
+    		
+    		BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+    		
+    		String output;
+    		System.out.println("Output from Server .... \n");
+    		while ((output = br.readLine()) != null) {
+    			output =  "\n " + output;
+    		}
+    		return output;    		
+
+    	} 
+    	catch (MalformedURLException e1)
+    	{
+    		e1.printStackTrace();
+    	} 
+    	catch (IOException e) 
+    	{
+    		e.printStackTrace();
+    	}
+    	finally
+    	{
+    		conn.disconnect();
+    	}
+    	return "nop";
     	
 //    	RelativisticModel.select();
 //        Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
