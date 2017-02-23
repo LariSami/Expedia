@@ -17,17 +17,54 @@ import org.jscience.physics.amount.Amount;
 
 import static spark.Spark.*;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class Main {
 
-  public static void main(String[] args) {
-
+  public static void main(String[] args) 
+  {
+	
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
     get("/hello", (req, res) -> {
-        RelativisticModel.select();
-        Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
-        return "E=mc^2: 12 GeV = " + m.toString();
+    	try 
+    	{
+    		URL url = new URL("https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel");
+    		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+    		conn.setRequestMethod("GET");
+    		conn.setRequestProperty("Accept", "application/json");
+    		
+    		BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+    		
+    		String output;
+    		System.out.println("Output from Server .... \n");
+    		while ((output = br.readLine()) != null) {
+    			output =  output;
+    		}
+
+    		conn.disconnect();
+    		return output;
+
+    	} 
+    	catch (MalformedURLException e1)
+    	{
+    		e1.printStackTrace();
+    	} 
+    	catch (IOException e) 
+    	{
+    		e.printStackTrace();
+    	}
+    	return "nop";
+    	
+//    	RelativisticModel.select();
+//        Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
+//        return "E=mc^2: 12 GeV = " + m.toString();
       });
 
     get("/", (request, response) -> {
