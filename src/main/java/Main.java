@@ -13,6 +13,7 @@ import java.util.Map;
 import static javax.measure.unit.SI.KILOGRAM;
 import javax.measure.quantity.Mass;
 import org.jscience.physics.model.RelativisticModel;
+import org.json.JSONObject;
 import org.jscience.physics.amount.Amount;
 
 import static spark.Spark.*;
@@ -40,15 +41,17 @@ public class Main {
     		URL url = new URL("https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel");
     		conn = (HttpURLConnection) url.openConnection();
     		conn.setRequestMethod("GET");
-//    		conn.setRequestProperty("Accept", "application/json");
+    		conn.setRequestProperty("Accept", "application/json");
     		
     		BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
-    		
-    		String output;
+    		JSONObject jObj = new JSONObject(br.readLine());
+    		String output = jObj.toString();
     		System.out.println("Output from Server .... \n");
-    		while ((output = br.readLine()) != null) {
-    			output =  "\n " + output;
-    		}
+//    		while ((output = br.readLine()) != null) 
+//    		{
+//    			output =  "\n " + output;
+//    		}
+    		System.out.println("OUTPUT : " + output);
     		return output;    		
 
     	} 
