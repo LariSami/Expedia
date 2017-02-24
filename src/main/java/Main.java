@@ -37,6 +37,7 @@ public class Main {
 
     get("/hello", (req, res) -> 
     {
+    	String u = "----------------------------------------------------------------";
     	HttpURLConnection conn = null;
     	try 
     	{
