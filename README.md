@@ -4,7 +4,7 @@
 I used Heroku to set up my Java app.
 as described in the Heroku steps
 # I ran this from terminal the following commands that will add the apt repository and install the CLI:
-# NOTE : I am using Ubuntu OS
+
 sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
 
 curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
@@ -13,6 +13,7 @@ sudo apt-get update
 
 sudo apt-get install heroku
 
+NOTE : I am using Ubuntu OS
 # I logged in to Heroku using command:
 heroku login
 
