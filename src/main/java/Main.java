@@ -40,7 +40,7 @@ public class Main {
     	HttpURLConnection conn = null;
     	try 
     	{
-    		URL url = new URL("https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel&lengthOfStay=3");
+    		URL url = new URL("https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel");
     		conn = (HttpURLConnection) url.openConnection();
     		conn.setRequestMethod("GET");
     		conn.setRequestProperty("Accept", "application/json");
