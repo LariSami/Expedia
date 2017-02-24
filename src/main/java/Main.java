@@ -5,7 +5,6 @@ import static spark.SparkBase.staticFileLocation;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,9 +16,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.swing.JButton;
-import javax.swing.JEditorPane;
 
 import com.expedia.entities.BigOffer;
 import com.expedia.entities.Hotel;
@@ -45,9 +41,6 @@ public class Main {
     	try 
     	{
     		URL url = new URL("https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel");
-    		BufferedReader sysin = new BufferedReader(new InputStreamReader(System.in));
-    		String msg = sysin.readLine();
-    		System.out.println(msg);
     		conn = (HttpURLConnection) url.openConnection();
     		conn.setRequestMethod("GET");
     		conn.setRequestProperty("Accept", "application/json");
