@@ -21,3 +21,8 @@
 - I included the HTML tags in the StringBuilder's object's string. I did not display the data in a table because some data values are too long to be squeezed in a cell.
 <br/>
 - Finally, after appending all the data into the StringBuilder's object's string, I returned the object's string
+
+
+# NOTES:
+- This is my first time working with JSON, maven project, and GitHub, that's why it took time more that expected.
+- 
