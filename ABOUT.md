@@ -24,4 +24,5 @@
 
 
 # NOTES:
-- This is my first time working with JSON, maven project, and GitHub, that's why it took more time that expected.
+- This is my first time working with JSON, maven projects,heroku and GitHub, that's why it took more time that expected.
+- I did not have the time to test it in a proper way (getting query parameters at runtime), so I changed the URL each time from Java code. 
