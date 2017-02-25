@@ -34,7 +34,6 @@ public class Main {
 
   public static void main(String[] args) 
   {
-	StringBuilder sb = new StringBuilder();
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
@@ -43,6 +42,7 @@ public class Main {
     	HttpURLConnection conn = null;
     	try 
     	{
+    		StringBuilder sb = new StringBuilder();
     		JFrame frame = new JFrame("jFrame");
     		String cityName = JOptionPane.showInputDialog(frame, "What's your destination city?  eg. Moscow");
     		URL url= null;
