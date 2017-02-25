@@ -15,7 +15,7 @@
 
 # Main
 - I checked if Response Code returned from the connection is not 200, it will throw a RuntimeException.
-- I used created a Gson object to convert the StringBuilder object that contains the JSON object as a string to a BigOffer object that I have created as a reflection of the JSON object.
+- I created a Gson object to convert the StringBuilder object that contains the JSON object as a string to a BigOffer object that I have created as a reflection of the JSON object.
 <br/>
 - I created static (so it can be accessed from main method) methods, to organize each section of the Offer's info.
 <br/>
