@@ -3,7 +3,7 @@
 
 I used Heroku to set up my Java app.
 as described in the Heroku steps
-# I ran this from terminal the following commands that will add the apt repository and install the CLI:
+# Run this from terminal the following commands that will add the apt repository and install the CLI:
 
 sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
 
@@ -14,12 +14,23 @@ sudo apt-get update
 sudo apt-get install heroku
 
 NOTE : I am using Ubuntu OS
-# I logged in to Heroku using command:
+# Log in to Heroku using command:
 heroku login
 
-# I cloned a sample application using command:
+# Cloned a sample application using command:
 git clone https://github.com/heroku/java-getting-started.git
 
+# Run app locally
+Using the following commands:
+<br/> 
+cd APP_LOCAL_DIRECTORY
+<br/>
+mvn clean install
+<br/>
+heroku local app
+<br/>
+Then open browser to : localhost:5000/hello
+ 
 
 # I created a new repository on GitHub:
 https://github.com/LariSami/Expedia
