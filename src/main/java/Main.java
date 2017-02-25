@@ -43,9 +43,9 @@ public class Main {
     	HttpURLConnection conn = null;
     	try 
     	{
-    		URL url= null;
     		JFrame frame = new JFrame("jFrame");
     		String cityName = JOptionPane.showInputDialog(frame, "What's your destination city?  eg. Budapest");
+    		URL url= null;
     		if (cityName != null && !cityName.trim().isEmpty())
     		{
     			url = new URL("https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel&destinationCity="+ cityName);
