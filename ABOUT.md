@@ -24,4 +24,4 @@
 
 
 # NOTES:
-- This is my first time working with JSON, maven projects,heroku and GitHub, that's why it took more time that expected.
+- This is my first time working with JSON, maven projects,heroku and GitHub, that's why it took more time than expected.
