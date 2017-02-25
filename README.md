@@ -41,3 +41,6 @@ So I used command:
 git remote set-url origin http://github.com/LariSami/Expedia
 
 Then I pushed my project to my Expedia repositiry in GitHub.
+
+# Testing
+I used JOptionPane to show a dialog box to take data from user, every time I used different variable (destinationCity, lengthOfStay...etc).
