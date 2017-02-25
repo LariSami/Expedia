@@ -29,4 +29,4 @@ Since I have cloned the application, I needed to change the origin's URL
 So I used command:
 git remote set-url origin http://github.com/LariSami/Expedia
 
-Then I pushed my project to my Expedia repositiry.
+Then I pushed my project to my Expedia repositiry in GitHub.
