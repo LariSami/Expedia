@@ -44,7 +44,7 @@ public class Main {
     	try 
     	{
     		JFrame frame = new JFrame("jFrame");
-    		String cityName = JOptionPane.showInputDialog(frame, "What's your destination city?  eg. Budapest");
+    		String cityName = JOptionPane.showInputDialog(frame, "What's your destination city?  eg. Moscow");
     		URL url= null;
     		if (cityName != null && !cityName.trim().isEmpty())
     		{
